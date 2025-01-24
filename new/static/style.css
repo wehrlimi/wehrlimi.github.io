@@ -1,0 +1,169 @@
+html {
+    --primary-foreground-color: #333333;
+    --brand-color: #21223e;
+    --secondary-brand-color: #5759a7;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    color: var(--primary-foreground-color);
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 2.66rem;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: var(--secondary-brand-color);
+}
+
+body > main,
+body > footer {
+    margin: 3rem auto 0;
+    padding: 0 3rem;
+    max-width: 1200px;
+}
+
+p {
+    margin: 0;
+}
+
+.content-with-side {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+.content-with-side__main {
+    flex: 1.6 1.6 0;
+}
+
+.content-with-side__side {
+    flex: 1 1 0;
+    min-width: 0;
+    order: 1;
+}
+
+@media (max-width: 750px) {
+    .content-with-side {
+        display: block;
+    }
+    .content-with-side__side {
+        float: right;
+        width: 12rem;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .content-with-side {
+        display: block;
+    }
+    .content-with-side__side {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+.rounded {
+    border-radius: 2rem;
+}
+
+.social-icons {
+    --social-icon-size: 4rem;
+
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: calc(var(--social-icon-size) / 16);
+}
+
+.social-icons > li {
+    font-size: 0;
+}
+
+.social-icons > li > a {
+    width: var(--social-icon-size);
+    height: var(--social-icon-size);
+    background-size: calc(var(--social-icon-size) / 1.15) calc(var(--social-icon-size)  / 1.15);
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-property: transform;
+}
+
+@media (max-width: 700px) {
+    .social-icons > li > a {
+        --social-icon-size: 3rem;
+    }
+}
+
+.social-icons > li > a:hover {
+    transform: scale(1.2);
+}
+
+.social-icons > li > a:active {
+    transform: scale(1.1);
+    transition-duration: 0.1s;
+}
+
+.social-icons__email {
+    background-image: url("./images/Mail_Icon.png");
+}
+
+.social-icons__github {
+    background-image: url("./images/Github_Icon.png");
+}
+
+.social-icons__google-scholar {
+    background-image: url("./images/Google_schoolar_Icon.png");
+}
+
+.social-icons__linkedin {
+    background-image: url("./images/LinkedIn_Icon.png");
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    text-decoration: none;
+    border-radius: 0.3rem;
+    background-color: var(--primary-foreground-color);
+    color: white;
+}
+
+.btn:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+figure.full-width {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+figure.full-width > * {
+    flex: 1 1 100%;
+    min-width: 0;
+}
