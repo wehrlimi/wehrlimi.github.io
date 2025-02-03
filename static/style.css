@@ -128,19 +128,19 @@ p {
 }
 
 .social-icons__email {
-    background-image: url("./images/Mail_Icon.png");
+    background-image: url("images/Mail_Icon.png");
 }
 
 .social-icons__github {
-    background-image: url("./images/Github_Icon.png");
+    background-image: url("images/Github_Icon.png");
 }
 
 .social-icons__google-scholar {
-    background-image: url("./images/Google_schoolar_Icon.png");
+    background-image: url("images/Google_schoolar_Icon.png");
 }
 
 .social-icons__linkedin {
-    background-image: url("./images/LinkedIn_Icon.png");
+    background-image: url("images/LinkedIn_Icon.png");
 }
 
 .btn {

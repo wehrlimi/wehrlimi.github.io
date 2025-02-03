@@ -1,82 +1,100 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="static/style.css">
     <title>Michael Wehrli</title>
-
-    <meta name="author" content="Michael Wehrli">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  </head>
-
-  <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Michael Wehrli
-                </p>
-                <p>I'm a first-year PhD Candidate at the <a href="https://dbe.unibas.ch/en/cian/">Center for medical Image Analysis & Navigation (CIAN)</a> at the <a href="https://www.unibas.ch/en.html">University of Basel</a>. My PhD is supervised by
-                  <a href="https://dbe.unibas.ch/en/persons/philippe-claude-cattin/">Philippe Claude Cattin</a> and <a href="https://www.ukbb.ch/de/personal/personen/Hasler-Carol.php">Carol-Claudius Hasler</a>.
+</head>
+<body>
+<main>
+    <section>
+        <h1>Michael Wehrli</h1>
+        <div class="content-with-side">
+            <img class="content-with-side__side rounded" src="static/images/CV_picture_Michael_Wehrli.jpg" alt="Michael Wehrli">
+            <div class="content-with-side__main">
+                <p>
+                    I'm a first-year PhD Candidate at the <a href="https://dbe.unibas.ch/en/cian/">Center for medical Image Analysis & Navigation (CIAN)</a> at the <a href="https://www.unibas.ch/en.html">University of Basel</a>. My PhD is supervised by
+                    <a href="https://dbe.unibas.ch/en/persons/philippe-claude-cattin/">Philippe Claude Cattin</a> and <a href="https://www.ukbb.ch/de/personal/personen/Hasler-Carol.php">Carol-Claudius Hasler</a>.
                 </p>
                 <p>
                   I hold a Bachelor's and Master's degree in Mechanical Engineering from <a href="https://ethz.ch/en.html">ETH Zurich</a>, completed in January 2022, with a focus on computer vision and biomedical engineering. Before starting my PhD, I gained professional experience in data analytics and AI consulting at <a href="https://www.bearingpoint.com/en-ch/">BearingPoint</a>.
                 </p>
-                <p style="text-align:center">
-                  <a href="mailto:michaeljan.wehrli@unibas.ch">Email</a> &nbsp;/&nbsp;
-                  <!--<a href="/gen3d-ph-kneemri/">First Publication - Early Acceptet at IPCAI 2025</a> &nbsp;/&nbsp;-->
-                  <a href="https://www.linkedin.com/in/michael-wehrli/">LinkedIn</a> &nbsp;/&nbsp;
-                  <a href="https://scholar.google.com/citations?hl=en&user=mDzUzvEAAAAJ">Google Scholar</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/wehrlimi">Github</a>
-                </p>
-              </td>
-              <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/CV_picture_Michael_Wehrli.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/CV_picture_Michael_Wehrli.jpg" class="hoverZoomLink"></a>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-                <p>
-                  I'm interested in deep learning, generative AI, image processing, and how to leverage Augmented Reality within surgery. My goal is to contribute to meaningful innovations at the intersection of technology and healthcare, leveraging data-driven solutions in advancing biomedical technologies.
-                </p>
-                <p>
-                  <a href="/gen3d-ph-kneemri/">Generating 3D Pseudo-Healthy Knee-MR Images to Support Trochleoplasty Planning</a>
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
+                <aside>
+                    <ul class="social-icons">
+                        <li><a class="social-icons__email" href="mailto:michaeljan.wehrli@unibas.ch">Email</a></li>
+                        <li><a class="social-icons__linkedin" href="https://www.linkedin.com/in/michael-wehrli/">LinkedIn</a></li>
+                        <li><a class="social-icons__google-scholar" href="https://scholar.google.com/citations?hl=en&user=mDzUzvEAAAAJ">Google Scholar</a></li>
+                        <li><a class="social-icons__github" href="#">Github</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Research</h2>
+        <a href="/gen3d-ph-kneemri/">
+            <figure class="full-width">
+                <img src="static/images/Fig_Intro_cropped%201.png" alt="3D Pseudo-Healthy Knee MRI">
+                <figcaption>Generating 3D Pseudo-Healthy Knee MR Images to Support Trochleoplasty Planning</figcaption>
+            </figure>
+        </a>
+        <p>Trochlear Dysplasia (TD) is a common malformation in adolescents, leading to anterior knee pain and instability. Surgical interventions such as trochleoplasty require precise planning to correct the trochlear groove. However, no standardized preoperative plan exists to guide surgeons in reshaping the femur. This study aims to generate patient-specific, pseudo-healthy MR images of the trochlear region that should theoretically align with the respective patient’s patella, potentially supporting the pre-operative planning of trochleoplasty.</p>
+    </section>
+    <section>
+        <h2>Open Master Theses</h2>
 
-          <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
-            <tr>
-              <td>
-                <h2>Open Master Theses</h2>
-                <p>
-                  Details about open Master Theses will be updated shortly. If you're interested in working on deep learning, AR in surgery, or biomedical technologies, please reach out via e-mail.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
+        <div class="content-with-side">
+            <img class="content-with-side__side" src="static/images/Fig_Landmark_Detection%201.png" alt="Landmark Detection project">
+            <div class="content-with-side__main">
+                <h4>Biomedical Engineering Master Thesis: Automated Detection of Trochlea Dysplasia in Knee MRI Images Using Deep Learning</h4>
 
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:right;font-size:small;">
-                  Template adapted from <a href="https://github.com/jonbarron/jonbarron_website">this website</a>.
+                <p>
+                    This master thesis is already taken, but if you are interested in similar projects, reach out and we can discuss!
                 </p>
-              </td>
-            </tr>
-          </tbody></table>
-        </td>
-      </tr>
-    </table>
-  </body>
+
+                <aside>
+                    <ul>
+                        <li><a class="btn" href="">Reach out!</a></li>
+                        <li><a class="btn" href="https://dbe.unibas.ch/fileadmin/user_upload/dbe/03_Education/MA_Thesis_Projects/052024_Cattin_Automated_Detection_of_Trochlea_Dysplasia_in_Knee_MRI_Images_Using_Deep_Learning.pdf">Official Form from Unibas</a></li>
+                    </ul>
+                </aside>
+            </div>
+
+        </div>
+
+        <div class="content-with-side">
+            <img class="content-with-side__side" src="static/images/Fig_Segmentation_Project.png" alt="Segmentation project">
+            <div class="content-with-side__main">
+                <h4>Medical Master Thesis: Super Resolution Knee MRI Bone and Cartilage Segmentation Project</h4>
+
+                <p>
+                    The research team from the Center for Image Analysis and Navigation at the Department of Biomedical
+                    Engineering at the University of Basel is working with the University Children's Hospital of both Basel
+                    to make knee operations more data-driven. As part of your master's thesis,
+                    you will train AI models on servers in real-time and correct their predictions using your medical expertise.
+                    Your goal is to refine the AI until it can fully automate the segmentation of high-resolution knee MRIs.
+                </p>
+
+                <aside>
+                    <ul>
+                        <li><a class="btn" href="">Reach out!</a></li>
+                        <li><a class="btn" href="https://www.medbas.ch/dmz/">Official Form on medbase.ch</a></li>
+                    </ul>
+                </aside>
+            </div>
+
+        </div>
+    </section>
+</main>
+<footer>
+    <ul class="social-icons">
+        <li><a class="social-icons__email" href="mailto:michaeljan.wehrli@unibas.ch">Email</a></li>
+        <li><a class="social-icons__linkedin" href="https://www.linkedin.com/in/michael-wehrli/">LinkedIn</a></li>
+        <li><a class="social-icons__google-scholar" href="https://scholar.google.com/citations?hl=en&user=mDzUzvEAAAAJ">Google Scholar</a></li>
+        <li><a class="social-icons__github" href="#">Github</a></li>
+    </ul>
+</footer>
+</body>
 </html>
