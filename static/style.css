@@ -130,6 +130,27 @@ p {
     order: 1;
 }
 
+.cv-image {
+    flex: 1 1 0;
+    min-width: 0;
+    order: 1;
+    box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.3);
+    transition: 0.3s ease all;
+}
+.cv-image:active {
+    box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.5);
+    animation: spin 0.5s ease-in-out;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .master-thesis-side {
     flex: 0 1 auto;
     min-width: 0;
