@@ -255,6 +255,10 @@ p {
     background-image: url("images/LinkedIn_Icon.png");
 }
 
+.social-icons__pdf {
+    background-image: url("images/PDF_Icon.png");
+}
+
 .btn {
     display: inline-block;
     padding: 0.3rem 0.7rem;
