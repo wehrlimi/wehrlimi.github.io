@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Towards MR-Based Trochleoplasty Planning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- FontAwesome & Academicons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+
+  <!-- Fonts and Bulma -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+  <!-- x3dom (for 3D rendering) -->
+  <script src="https://www.x3dom.org/download/x3dom.js"></script>
+  <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css">
+
+  <!-- img-comparison-slider -->
+  <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css">
+
+  <script>
+    document.addEventListener("mousedown", function(e) {
+      if ((e.buttons & 4) === 4 && e.target.matches(".x3dom-canvas")) {
+        e.preventDefault();
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://wehrlimi.github.io/">
+        <span class="icon">
+            <i class="fas fa-home"></i>
+        </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Towards MR-Based Trochleoplasty Planning</h1>
+            <h2 class="are-large"> <a href="https://sites.google.com/view/miccai-2025-colas/home"> Accepted at MICCAI COLAS Workshop 2025</h2>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://wehrlimi.github.io/">Michael Wehrli</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://dbe.unibas.ch/en/persons/alicia-durrer/">Alicia Durrer</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://pfriedri.github.io/">Paul Friedrich</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://dbe.unibas.ch/en/persons/sidaty-el-hadramy/">Sidaty El Hadramy</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.solothurnerspitaeler.ch/portfolio/edwin-li">Edwin Li</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="">Luana Brahaj</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://www.ukbb.ch/en/personal/personen/Hasler-Carol.php">Carol C. Hasler</a><sup>3</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://dbe.unibas.ch/en/persons/philippe-claude-cattin/">Philippe Claude Cattin</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Department of Biomedical Engineering, University of Basel, Allschwil, Switzerland,</span>
+              <span class="author-block"><sup>2</sup>Olten Cantonal Hospital, Olten, Switzerland,</span>
+              <span class="author-block"><sup>3</sup>Department of Orthopedics, University Children's Hospital Basel, Switzerland</span>
+            </div>
+
+
+            <!-- Link Buttons Section -->
+            <div class="container has-text-centered mt-4">
+              <div class="buttons is-centered">
+
+                <!-- Paper Link -->
+              </span>
+              <span class="link-block">
+                <a href="https://link.springer.com/chapter/10.1007/978-3-032-09784-2_1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+                <!-- Arxiv Link  -->
+                <a href=https://arxiv.org/abs/2508.06076 class="button is-dark is-rounded" target="_blank">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>ArXiv</span>
+                </a>
+
+                <!-- GitHub Button -->
+                <a href="https://github.com/wehrlimi/sr-3d-pln" class="button is-dark is-rounded" target="_blank">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+                <!-- Dataset Link. -->
+
+                <a href="https://fastmri.med.nyu.edu/" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="far fa-images"></i></span>
+                  <span>Data</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        <div>
+    </div>
+  </section>
+
+  <!-- 3D X3D Viewer Section -->
+  <section class="section">
+    <div class="container has-text-centered">
+      <h2 class="title is-4">Result: A patient-specific, super-resolved pseudo-healthy 3D Mesh that could be used for intraoperative navigation.</h2>
+      <x3d>
+        <scene>
+          <Inline url="deformation_viewer_lightweight_V2.x3d"> </Inline>
+        </scene>
+      </x3d>
+      <p class="is-size-6 mt-3">If the viewer doesn't show, ensure you use safari or chrome. You can orient the Mesh with your mouse. Zoom in for better details. The visualization shows both meshes: The super resolved mesh before and after step 3. Blue arrows indicate where bone should be removed, red arrows indicate where bone should be added.</p>
+    </div>
+  </section>
+
+  <!-- Image Comparison Slider Section -->
+  <section class="section">
+    <div class="container has-text-centered">
+      <h2 class="title is-4">Before and after Step 1 (Super Resolution MRI (INR)). View of one axial slice only.</h2>
+      <img-comparison-slider style="max-width: 100%; height: auto;">
+        <img slot="first" src="./images/axiall_sagvolume_0_aligned.png" alt="Before" />
+        <img slot="second" src="./images/axiall_INRvolume_0_aligned.png" alt="After" />
+      </img-comparison-slider>
+      <p class="is-size-6 mt-3">Note that it's the same patient as in the visualization above.</p>
+    </div>
+  </section>
+
+  <!-- Image Comparison Slider Section -->
+  <section class="section">
+    <div class="container has-text-centered">
+      <h2 class="title is-4">Before and after Step 2 (Segmentation). View of one axial slice only.</h2>
+      <img-comparison-slider style="max-width: 100%; height: auto;">
+        <img slot="first" src="./images/axiall_INRvolume_0_aligned.png" alt="Before" />
+        <img slot="second" src="./images/axiall_INRvolume_MoLa_0_aligned.png" alt="After" />
+      </img-comparison-slider>
+      <p class="is-size-6 mt-3">Note that it's the same patient as in the visualization above.</p>
+    </div>
+  </section>
+
+  <!-- Image Comparison Slider Section -->
+  <section class="section">
+    <div class="container has-text-centered">
+      <h2 class="title is-4">Before and after Step 3 (Inpainting with WDM). View of one axial slice only.</h2>
+      <img-comparison-slider style="max-width: 100%; height: auto;">
+        <img slot="first" src="./images/axiall_INRvolume_MoLa_0_aligned.png" alt="Before" />
+        <img slot="second" src="./images/axiall_INRvolume_MoLa_WDM_Inp0_aligned.png" alt="After" />
+      </img-comparison-slider>
+      <p class="is-size-6 mt-3">Note that it's the same patient as in the visualization above. With marching cubes we compute the mesh and can compute the visualization that is shown above.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              To treat Trochlear Dysplasia (TD), current approaches rely mainly on low-resolution clinical Magnetic Resonance (MR) scans and surgical intuition.
+              The surgeries are planned based on surgeons experience, have limited adoption of minimally invasive techniques, and lead to inconsistent outcomes.
+              We propose a pipeline that generates superresolved, patient-specific 3D pseudo-healthy target morphologies from conventional clinical MR scans.
+              First, we compute an isotropic superresolved MR volume using an Implicit Neural Representation (INR).
+              Next, we segment femur, tibia, patella, and fibula with a multi-label custom-trained network.
+              Finally, we train a Wavelet Diffusion Model (WDM) to generate pseudo-healthy target morphologies of the trochlear region.
+              In contrast to prior work producing pseudo-healthy low-resolution 3D MR images, our approach enables the generation of sub-millimeter resolved 3D shapes compatible for pre- and intraoperative use.
+              These can serve as preoperative blueprints for reshaping the femoral groove while preserving the native patella articulation.
+              Furthermore, and in contrast to other work, we do not require a CT for our pipeline - reducing the amount of radiation.
+              We evaluated our approach on 25 TD patients and could show that our target morphologies significantly improve the sulcus angle (SA) and trochlear groove depth (TGD).
+            </p>
+          </div>
+        </div>
+      </div>
+    <!--/ Abstract. -->
+
+  </section>
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{wehrli2025towards,
+      title={Towards MR-Based Trochleoplasty Planning},
+      author={Wehrli, Michael and Durrer, Alicia and Friedrich, Paul and Hadramy, Sidaty El and Li, Edwin and Brahaj, Luana and Hasler, Carol C and Cattin, Philippe C},
+      journal={arXiv preprint arXiv:2508.06076},
+      year={2025}
+      }
+      </code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        Image comparison slider powered by <code>img-comparison-slider</code>.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
